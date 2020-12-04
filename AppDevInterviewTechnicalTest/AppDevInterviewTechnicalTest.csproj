@@ -147,6 +147,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Db\Initialize Database.sql" />
     <Content Include="App_Data\Db\Security\Roles\db_datareader.sql" />
     <Content Include="App_Data\Db\Security\Roles\db_datawriter.sql" />
     <Content Include="App_Data\Db\Security\Roles\webapp.sql" />
