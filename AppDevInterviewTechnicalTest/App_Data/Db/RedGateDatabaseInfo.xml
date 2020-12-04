@@ -59,6 +59,11 @@
     <DataWriteAllFilesInOneDirectory>True</DataWriteAllFilesInOneDirectory>
   </WriteToFileOptions>
   <DataFileSet>
-    <Count>0</Count>
+    <Count>5</Count>
+    <DataFile>tickets.Lookup_Tag_Data.sql</DataFile>
+    <DataFile>tickets.Lookup_TicketStatus_Data.sql</DataFile>
+    <DataFile>tickets.User_Data.sql</DataFile>
+    <DataFile>tickets.Ticket_Data.sql</DataFile>
+    <DataFile>tickets.TicketNote_Data.sql</DataFile>
   </DataFileSet>
 </DatabaseInformation>

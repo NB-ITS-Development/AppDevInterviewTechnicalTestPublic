@@ -6,7 +6,8 @@ CREATE TABLE [tickets].[Ticket]
 [DateTimeModified] [datetime] NOT NULL,
 [CreatedBy] [int] NOT NULL,
 [ModifiedBy] [int] NOT NULL,
-[Tag] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+[Tag] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Status] [int] NOT NULL
 ) ON [PRIMARY]
 GO
 ALTER TABLE [tickets].[Ticket] ADD CONSTRAINT [PK_Ticket] PRIMARY KEY CLUSTERED  ([Id]) ON [PRIMARY]
@@ -16,6 +17,8 @@ GO
 ALTER TABLE [tickets].[Ticket] ADD CONSTRAINT [FK_Ticket_CreatedBy_User] FOREIGN KEY ([CreatedBy]) REFERENCES [tickets].[User] ([Id])
 GO
 ALTER TABLE [tickets].[Ticket] ADD CONSTRAINT [FK_Ticket_ModifiedBy_User] FOREIGN KEY ([CreatedBy]) REFERENCES [tickets].[User] ([Id])
+GO
+ALTER TABLE [tickets].[Ticket] ADD CONSTRAINT [FK_Ticket_Status_Lookup_TicketStatus] FOREIGN KEY ([Status]) REFERENCES [tickets].[Lookup_TicketStatus] ([Id])
 GO
 ALTER TABLE [tickets].[Ticket] ADD CONSTRAINT [FK_Ticket_Tag] FOREIGN KEY ([Tag]) REFERENCES [tickets].[Lookup_Tag] ([TagName])
 GO
