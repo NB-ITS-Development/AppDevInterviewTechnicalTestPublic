@@ -1,0 +1,4 @@
+CREATE ROLE [webapp]
+AUTHORIZATION [dbo]
+GO
+GRANT EXECUTE TO [webapp]
